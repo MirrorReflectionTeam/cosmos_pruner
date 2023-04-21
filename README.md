@@ -66,6 +66,7 @@ chmod +x ./script_for_prune.sh
 
 ### Create cron job(executing every day at 00:00)
 >You can set your time when the script will be executed 
+>
 **[Site for help](​https://crontab.guru/)** 
 ```
 # open crontab
