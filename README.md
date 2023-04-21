@@ -11,7 +11,9 @@ Cosmprund works of a data directory that has the same structure of a normal cosm
 
 ## 🛠Start pruning
 >Example:
+>
 >YOUR NODE BINARY NAME = palomad
+>
 >YOUR NODE BINARY FOLDER = .paloma
 ```
 # clone & build cosmprund repo
