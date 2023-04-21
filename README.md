@@ -1,6 +1,6 @@
 # Node pruner
 
-##📝About
+##About
 The goal of this project is to be able to prune a tendermint data base of blocks and an Cosmos-sdk application DB of all but the last X versions. This will allow people to not have to state sync every x days. This tool works with a subset of modules. While an application may have modules outside the scope of this tool , this tool will prune the default sdk module, and osmosis added module.
 
 ##❗️WARNING
