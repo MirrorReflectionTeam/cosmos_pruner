@@ -20,14 +20,14 @@ Cosmprund works of a data directory that has the same structure of a normal cosm
 git clone https://github.com/binaryholdings/cosmprund
 cd cosmprund
 make build
-​
+
 # stop daemon/cosmovisor
 sudo systemctl stop <YOUR NODE BINARY NAME>
 sudo systemctl stop cosmovisor
-​
+
 # run cosmprund 
 ./build/cosmprund prune ~/<YOUR NODE BINARY FOLDER WITH ".">/data 
-​
+
 # start daemon/cosmovisor
 sudo systemctl start <YOUR NODE BINARY NAME>
 sudo systemctl start cosmovisor
@@ -45,15 +45,15 @@ sudo systemctl enable cron
 # create script file
 cd $HOME
 sudo nano script_for_prune.sh
-​
+
 # and past code with replacing your bin name/home
-​
+
 #!/bin/bash
 sudo systemctl stop <bin name>
 cd /root/cosmprund
 sudo ./build/cosmprund prune ~/<bin home>/data
 sudo systemctl restart <bin name>
-​
+
 # exit from nano redactor with control+x and save with control+y
 ```
 
@@ -66,15 +66,15 @@ chmod +x ./script_for_prune.sh
 
 ### Create cron job(executing every day at 00:00)
 >You can set your time when the script will be executed 
->
-**[Site for help](​https://crontab.guru/)** 
+
+**[Site for help](https://crontab.guru/)** 
 ```
 # open crontab
 crontab -e
-​
+
 # and paste
 0 0 * * * /bin/bash -c /root/script_for_prune.sh
-​
+
 # exit with control+x
 ```
 **Now your node will clear unnecessary data every day at 00:00!**
